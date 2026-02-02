@@ -20,7 +20,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #ddd;
+  background-color: teal;
   padding: 10px;
   grid-template-rows: 80px 1fr;
 
@@ -45,14 +45,25 @@ body {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr; /* 3 columns: projects take 2, side column takes 1 */
   /* grid-template-rows: repeat(4, 150px); /* will adjust for content */
-  grid-template-rows: .3fr 3fr 3fr 3fr;
+  grid-template-rows: .1fr 1fr 1fr 1fr;
   gap: 10px;
 }
 
 div {
   border: 1px solid #999;
-  text-align: center;
   padding: 10px;
+}
+
+.branding {
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+
+}
+
+.nav {
+  color: white;
+  font-weight: bold;
 }
 
 /* Projects span first 2 columns and all 3 rows */
@@ -62,7 +73,7 @@ div {
   display: grid;
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: repeat(3, 1fr); 
-  gap: 10px;
+  gap: 10px;  
 }
 
 
@@ -75,6 +86,12 @@ div {
   border: 1px solid #999;
 }
 
+.announcements .card {
+  border-bottom: 1px;
+  border-radius: 0%;
+  border-left: 0px;
+}
+
 /* Trending in column 3, below announcements */
 .trending {
   grid-column: 3; /* third column */
@@ -84,12 +101,30 @@ div {
   border: 1px solid #999;
 }
 
+.trending .card {
+  border-bottom: 1px;
+  border-radius: 0%;
+  border-left: 0px; 
+}
+
 .card {
   background-color: #fff;
-  border: 1px solid #999;
+  border-left: 10px solid goldenrod;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.search {
+  display:flex;
+}
+.search-input {
+  flex-grow: 1;
+  border-radius: 40px;
+  grid-column: 1 / span 2; 
+
 }
 
